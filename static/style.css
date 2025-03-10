@@ -28,8 +28,11 @@ li:nth-child(2n) {
     padding: 5px;
     margin: 5px;
 }
-* > form{
+form *{
     display:block;
     margin:auto;
+    width:500px;
+    height: 25px;
     text-align:center;
 }
+
