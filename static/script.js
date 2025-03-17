@@ -1,42 +1,16 @@
-var x, y, z;
-let A, B, C;
 
-x = 5;
-y = 7;
-z = x + y;
-
-A = "Hello ";
-B = "world!";
-C = A + B;
-console.log(C);
-
-SumNPrint(x,y);
-SumNPrint(A,B);
-
-if (C.length < z){
-    console.log(z);
-}
-else if (C.length > z){
-    console.log(C);
-}
-else{
-    console.log("good job!");
-}
-
-const L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
-const L2 = ["Apple", "Banana", "Kiwi", "Orange"];
 
 function addYear(){
     var d = new Date();
     var h = d.getFullYear();
+    console.log(h);
     const E = document.getElementById("copyYear");
-    E.innerHTML=h;
+    E.innerHTML = ""+h+"";
 }
 
 function greetingFunc() {
     var d = new Date();
     var h = d.getHours();
-    console.log(h);
     const E = document.getElementById("greetings");
     let greeting = "";
 
@@ -55,5 +29,20 @@ function greetingFunc() {
     E.innerHTML = `${greeting}! I am Jessica`;
 }
 
+function reveal(){
+    const show_more = "I like coffee and cornbread.";
+    const button = document.getElementById("showmore");
+    const E = document.getElementById("fun show more text");
+    if (E.innerHTML == show_more){
+        E.innerHTML = "";
+        button.textContent = "show more";
+    }
+    else{
+        E.innerHTML = show_more;
+        button.textContent = "show less";
+    }
+
+}
 // Ensure the function runs when the page loads
 window.onload = greetingFunc;
+window.onload = addYear;
