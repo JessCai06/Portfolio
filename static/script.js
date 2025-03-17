@@ -26,31 +26,13 @@ else{
 const L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
 const L2 = ["Apple", "Banana", "Kiwi", "Orange"];
 
-// L1.forEach(findTheBanana);
-// L2.forEach(findTheBanana);
-
-
-
-function findTheBanana(item, index, arr){
-    if (item == "Banana"){
-        alert("found the Banana at index " + i);
-    }
+function addYear(){
+    var d = new Date();
+    var h = d.getFullYear();
+    const E = document.getElementById("copyYear");
+    E.innerHTML=h;
 }
 
-function findTheBanana(L){
-    for (var i = 0; i< L.length; i ++){
-        if (L[i] == "Banana"){
-            alert("found the Banana at index " + i);
-        }
-    }
-    alert("couldn't find banana :(");
-}
-//sum of x1 and x2
-function SumNPrint(x1, x2){
-    var x3 = x1 + x2;
-    console.log(x3);
-    return x3;
-}
 function greetingFunc() {
     var d = new Date();
     var h = d.getHours();
