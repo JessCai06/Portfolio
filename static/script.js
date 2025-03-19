@@ -1,6 +1,7 @@
 
 
 function addYear(){
+    console.log("add year");
     var d = new Date();
     var h = d.getFullYear();
     console.log(h);
@@ -50,7 +51,8 @@ function reveal(){
 }
 function validate(){
     const E = document.getElementById("name_input_contact");
-    if (E.value != "")
+    const B = document.getElementById("email_input_contact");
+    if (E.value != "" && B.value!="")
     {
         const M = document.getElementById("validate_message");
         M.innerHTML= "Your form was sucessfully submitted ";
@@ -67,16 +69,18 @@ function show_more_fun(){
     const show_more = "<li>anything outdoors really - hiking camping biking</li><li>binging movies i've already watched with my friends who haven't seen it</li><li>cooking for other people</li><li>going to antique shops and flea markets</li><li>snorkeling hehe</li>";
     const button = document.getElementById("showmore_fun");
     const E = document.getElementById("fun_list_id");
-    if (E.innerHTML == show_more){
+    if (E!= null && E.innerHTML == show_more){
         E.innerHTML = "";
         button.textContent = "show more";
     }
-    else{
+    else if (E!= null){
         E.innerHTML = show_more;
         button.textContent = "show less";
     }
 }
 
-window.onload = greetingFunc;
-window.onload = addYear;
-window.onload = show_more_fun;
+window.onload = function () {
+    greetingFunc();
+    addYear();
+    show_more_fun();
+};
