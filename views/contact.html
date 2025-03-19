@@ -45,14 +45,14 @@
         </table>
         <form action = "javascript: validate();"> 
             <label id = "name_field">name</label>
-            <input type="text" id="name_input" required>
+            <input id="name_input_contact" type="text" required>
             <label id = "email_field">email</label>
             <input type="email" name="email" id="email" required class="form-control">
             <label for="ccomment">Your comment</label>
             <textarea id="ccomment" name="comment" required> </textarea>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" onclick="validate()">
         </form>
-    <div style="align-self: center;">
+    <div style="text-align: center; color:red;">
         <p id = "validate_message"></p>
     </div>
 

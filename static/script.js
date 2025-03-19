@@ -49,9 +49,17 @@ function reveal(){
     }
 }
 function validate(){
-    const E = document.getElementById("name_input");
-    const M = document.getElementById("validate_message");
-    M.innerHTML= "Your form was sucessfully submitted "+ E.innerHTML;
+    const E = document.getElementById("name_input_contact");
+    if (E.value != "")
+    {
+        const M = document.getElementById("validate_message");
+        M.innerHTML= "Your form was sucessfully submitted ";
+    }
+    else{
+        const M = document.getElementById("validate_message");
+        M.innerHTML= "Please fix your form";
+    }
+    console.log("this is E"+E.innerHTML.value);
 }
 
 function show_more_fun(){
