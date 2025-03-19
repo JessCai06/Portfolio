@@ -49,7 +49,6 @@ function reveal(){
     }
 }
 function show_more_fun(){
-    alert("hi");
     const show_more = "<li>anything outdoors really - hiking camping biking</li><li>binging movies i've already watched with my friends who haven't seen it</li><li>cooking for other people</li><li>going to antique shops and flea markets</li><li>snorkeling hehe</li>";
     const button = document.getElementById("showmore_fun");
     const E = document.getElementById("fun_list_id");
