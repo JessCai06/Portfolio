@@ -31,11 +31,31 @@ function greetingFunc() {
 }
 }
 function validate() {
-                const E = document.getElementById("message");
-                    if (E!= null && E.innerHTML == show_more) {
-                        E.innerHTML = "<p style=\"red\">validated!<\p>";
-                    }
-                }
+    const E = document.getElementById("message");
+        if (E!= null && E.innerHTML == show_more) {
+            E.innerHTML = "<p style=\"red\">validated!<\p>";
+        }
+    }
+
+function getAdvice() {
+    console.log("Fetching advice...");
+
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => response.json()) // Convert response to JSON
+        .then(data => {
+            const adviceText = data.slip.advice; // Extract advice
+            console.log("Advice received:", adviceText);
+            
+            // Display advice on the webpage
+            const adviceElement = document.getElementById("adviceText");
+            if (adviceElement) {
+                adviceElement.innerHTML = `"${adviceText}"`;
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching advice:", error);
+        });
+}
 
 function reveal(){
     const show_more = "I like coffee and cornbread.";

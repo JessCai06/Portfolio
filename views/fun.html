@@ -29,11 +29,33 @@
             </div>
         </nav>
     </header>
-    <div class="main">
-        <h2>Things I love to do for fun</h2>
-        <button onclick="show_more_fun()" id="showmore_fun">show more</button>
-        <ul id="fun_list_id"></ul>
+    
+    <div class="grid-container">
+        <!-- Row 1 -->
+        <div class="grid-item">
+            <h2>My name is Jessica</h2>
+            <ul id="fun_list_id"></ul>
+            <button onclick="show_more_fun()" id="showmore_fun">Show More</button>
+        </div>
+        <div class="grid-item">
+            <img class="funIMG" src="../static/fun.png" alt="Fun image"
+                style="border-radius: 10%; width: 100%; max-width: 300px;">
+        </div>
+    
+        <!-- Row 2 -->
+        <div class="grid-item">
+            <iframe width="100%" height="250" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+            </iframe>
+        </div>
+        <div class="grid-item">
+            <div class="container">
+                <p>Ask Me for Advice!</p>
+                <button onclick="getAdvice()">Click me for advice</button>
+                <p id="adviceText"></p>
+            </div>
+        </div>
     </div>
+
     <footer>© <span id="copyYear" onload="addYear()"></span> Copyrights belong to Jessica Cai</footer>
 </body>
 
