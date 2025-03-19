@@ -43,7 +43,7 @@
                 <th>123-456-7890</th>
             </tr>
         </table>
-        <form> 
+        <form action = "javascript:validate();"> 
             <label id = "name_field">name</label>
             <input type="text" required>
             <label id = "email_field">email</label>
@@ -52,6 +52,8 @@
             <textarea id="ccomment" name="comment" required> </textarea>
             <input type="submit" value="Submit">
         </form>
+    <div id = "message"></div>
+
     </div>
     <footer>© <span id="copyYear" onload="addYear()"></span> Copyrights belong to Jessica Cai</footer>
 </body>
