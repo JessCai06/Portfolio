@@ -43,16 +43,18 @@
                 <th>123-456-7890</th>
             </tr>
         </table>
-        <form action = "javascript:validate();"> 
+        <form action = "javascript: validate();"> 
             <label id = "name_field">name</label>
-            <input type="text" required>
+            <input type="text" id="name_input" required>
             <label id = "email_field">email</label>
             <input type="email" name="email" id="email" required class="form-control">
             <label for="ccomment">Your comment</label>
             <textarea id="ccomment" name="comment" required> </textarea>
             <input type="submit" value="Submit">
         </form>
-    <div id = "message"></div>
+    <div style="align-self: center;">
+        <p id = "validate_message"></p>
+    </div>
 
     </div>
     <footer>© <span id="copyYear" onload="addYear()"></span> Copyrights belong to Jessica Cai</footer>
